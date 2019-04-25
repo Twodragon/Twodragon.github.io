@@ -5,9 +5,9 @@
 <h2>Description</h2>
 <p>This is a distributed file system with three components: Master Server, Slave Servers and Clients. Master Server is a mediator between Slaves and Clients, which means that it processes requests by clients, gets file data from slave servers if needed, and than sends an answer back to the client. No file data is stored on the Master Server, only files and directories names; all the files are stored on Slave Servers. Master Server and one Slave Server are already running, so you can connect, and you can run a Slave Server instance to see that files are stored there too (Though Slave Server to store data is chosen randomly, so it can happen not on the first try).</p>
 <h2>Dependecies</h2>
-<p>This project uses boost, so you have to install Boost (at least version 1.65.1), even for the client application</p>
+<p>This project uses boost, so you have to install Boost (at least version 1.65.1), even for the client application.</p>
 <h2>Download</h2>
-<p>You can download the application's code here: <a href="https://github.com/Twodragon/DFS-packed/">DFS Applications</a> </p>
+<p>You can download the application's code here: <a href="https://github.com/Twodragon/DFS-packed/">DFS Applications</a>. </p>
 <h2>Install and Run</h2>
 <p>To install and run the application just cd into the directory of application you want to use and run: <br />
 $ cmake CMakeLists.txt<br />
