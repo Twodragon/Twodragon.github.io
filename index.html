@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Sergey Efimochkin's Distributed File System</h1>
+<h2>Description</h2>
+<p>This is a distributed file system with three components: Master Server, Slave Servers and Clients. Master Server is a mediator between Slaves and Clients, which means that it processes requests by clients, gets file data from slave servers if needed, and than sends an answer back to the client. No file data is stored on the Master Server, only files and directories names; all the files are stored on Slave Servers. Master Server and one Slave Server are already running, so you can connect, and you can run a Slave Server instance to see that files are stored there too (Though Slave Server to store data is chosen randomly, so it can happen not on the first try).</p>
+<h2>Dependecies</h2>
+<p>This project uses boost, so you have to install Boost (at least version 1.65.1), even for the client application</p>
+<h2>Download</h2>
+<p>You can download the application's code here: https://github.com/Twodragon/DFS-packed</p>
+<h2>Install and Run</h2>
+<p>To install and run the application just cd into the directory of application you want to use and run: 
+$ cmake CMakeLists.txt
+$ make
+$ ./DFS_Application (DFS_client for client application, for example)</p>
+<h2>How to Interact with the DFS</h2>
+<p>The Distributed File System supports the following commands:
+<i>ls</i> to list files in current directory
+<i>cd</i> $name$ to go to directory named $name$
+<i>mkdir</i> $name$ to create directory named $name$
+<i>touch</i> $name$ $file text$ to create a file named $name$ with text of file $file text$
+<i>rmdir</i> $name$ to delete directory named $name$ and all files in it
+<i>rm</i> $name$ to delete file named $name$ from directory
+<i>read</i> $name$ to print text of file named $name$
+<i>import</i> $outer name$ $inner name$ to import file named $outer name$ from computer's file system and save it as file named $inner name$ in distributed file system
+<i>export</i> $inner name$ $outer name$ to export file named $inner name$ into computer's file system as a file named $outername$
+<i>help</i> for this commands list
+<i>exit</i> to exit
+
+Note that you cannot delete a file if somebody else is reading (downloading it) and you cannot delete a directory if somebody else is inside it.
+</p>
+
+</body>
+</html>
